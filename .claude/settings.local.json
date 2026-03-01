@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(pip install:*)",
+      "Bash(pip show:*)",
+      "Bash(python:*)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis log --oneline -5)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis log --oneline)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis checkout --orphan temp)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis rm:*)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis add -A)",
+      "Bash(git -C /Users/sacharavya/Desktop/ttc-delay-analysis status --short)"
+    ]
+  }
+}
