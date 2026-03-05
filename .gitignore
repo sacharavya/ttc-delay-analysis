@@ -206,6 +206,10 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# IDE / tool folders
+.claude/
+.virtual_documents/
+
 # Data files - ignore contents but keep folder structure
 data/**/*.csv
 data/**/*.txt

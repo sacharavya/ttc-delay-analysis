@@ -1,4 +1,4 @@
-# ttc-delay-analysis
+# TTC Delay Analysis
 
 Predictive analytics for TTC bus delays using XGBoost and SHAP explainability, built on stop-level AVL/GPS data from Toronto Transit Commission.
 
@@ -74,18 +74,6 @@ ttc-delay-analysis/                        ← Jupyter root
 - `stop_times.csv` = 554 MB (largest file)
 - Two same-date folders exist for Nov 13 2025 (`_1219` and `_1519`) — both valid
 - After merge: 12 output files in `gtfs_merged_29_39/`
-
-### Errors Encountered & Fixed
-
-| Error                                    | Cause                                                  | Fix                                                        |
-| ---------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------- |
-| `Found 0 GTFS feed folders`              | Wrong path (`ttc-del` instead of `ttc-delay-analysis`) | Use `Path.home() / "Desktop" / "ttc-delay-analysis" / ...` |
-| `Found 0 GTFS feed folders` (again)      | `Path("~/...")` doesn't expand tilde                   | Use `Path.home()` not `Path("~")`                          |
-| `ValueError: duplicate entries` in pivot | Two folders with same date (Nov 13)                    | Replace `.pivot()` with `.groupby().sum().unstack()`       |
-| `IndentationError`                       | Line continuation `\\\\\\\\` broke in copy-paste       | Split into separate variables                              |
-| `NameError: routes_m`                    | Cell run out of order + typos                          | Added all definitions at cell top                          |
-
----
 
 ### AVL Data Schema (no header row in CSV files)
 
