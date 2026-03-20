@@ -228,3 +228,5 @@ data/processed/**
 # DuckDB
 *.duckdb
 *.duckdb.wal
+*.parquet
+*.csv
